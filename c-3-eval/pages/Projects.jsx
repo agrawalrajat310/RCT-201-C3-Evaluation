@@ -38,4 +38,18 @@ const Projects = ({ gets }) => {
   );
 };
 
+export async function getStaticProps() {
+  let res = await fetch(
+    `https://api.github.com/search/repositories?q=user:agrawalrajat310+fork:true&sort=updated&per_page=10&type=Repositories`
+  );
+  let data = await res.json();
+  let arr = [];
+  arr.push(data);
+  return {
+    props: {
+      gets: data.items,
+    },
+  };
+}
+
 export default Projects;
