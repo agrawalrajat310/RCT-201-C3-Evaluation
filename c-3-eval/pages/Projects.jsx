@@ -14,7 +14,7 @@ const Projects = ({ gets }) => {
 
       <main>
         <div className="project_main">
-          {gets.map((el) => (
+          {gets?.map((el) => (
             <div key={el.id}>
               <Link href={`${el.html_url}`}>
                 <Text>{el.name}</Text>
