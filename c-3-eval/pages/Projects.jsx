@@ -17,7 +17,7 @@ const Projects = ({ gets }) => {
           {gets.map((el) => (
             <div key={el.id}>
               <Link href={`${el.html_url}`}>
-                {" "}
+              
                 <Text>{el.name}</Text>
                 <div
                   style={{
