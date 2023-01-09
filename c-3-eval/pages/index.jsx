@@ -77,7 +77,6 @@ export async function getStaticProps() {
 
 export default Home;
 
-
 // https://api.github.com/search/repositories?q=user:${username}+fork:true&sort=updated&per_page=10&type=Repositories
 
 // https://api.github.com/users/${username}
