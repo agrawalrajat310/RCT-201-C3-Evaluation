@@ -62,3 +62,20 @@ RESUME LINK */}
     </>
   );
 };
+
+export async function getStaticProps() {
+  let res = await fetch(`https://api.github.com/users/agrawalrajat310`);
+  let data = await res.json();
+  let arr = [];
+  arr.push(data);
+  return {
+    props: {
+      github: arr,
+    },
+  };
+}
+
+export default Home;
+
+
+// https://api.github.com/search/repositories?q=user:${username}+fork:true&sort=updated&per_page=10&type=Repositories
